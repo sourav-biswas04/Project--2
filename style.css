@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url("bg.jpg");
+  height: 70vh;
+  position: relative;
+  top: 0;
+  background-position: center center;
+  background-size: max(1200px, 100vw);
+  background-repeat: no-repeat;
+
+}
+
+.main.box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.69;
+  background-color: black;
+
+}
+
+nav {
+  max-width: 60vw;
+  justify-content: space-between;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 62px;
+}
+
+nav img {
+  color: red;
+  width: 114px;
+  position: relative;
+  z-index: 10;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  font-family: "Roboto Mono", monospace;
+  height: calc(100%-62px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  gap: 23px;
+  padding: 0 30px;
+}
+
+.hero> :nth-child(1) {
+  font-weight: bolder;
+  font-size: 48px;
+  text-align: center;
+}
+
+.hero> :nth-child(2) {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
+.hero> :nth-child(3) {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.seperation {
+  height: 7px;
+  background-color: rgb(57, 57, 57);
+}
+
+.btn {
+  padding: 3px 8px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 5px;
+
+  .hero-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+.main input{
+  padding: 7px 101px 8px 14px;
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: rgba(23, 23 , 23, 0.7);
+  font-weight: 900;
+  border: 1px solid rgb(214, 199, 199);
+}
+
+.btn-red-sn {
+  background-color: red;
+  color: white;
+}
