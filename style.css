@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
 
-* {
+*  {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -11,7 +11,7 @@ body {
 }
 
 .main {
-    background-image: url("bg.jpg");
+    background-image: url("/bg.jpg");
     background-position: center center;
     background-size: max(1200px, 100vw);
     background-repeat: no-repeat;
@@ -81,11 +81,11 @@ nav button {
     text-align: center;
 }
 
-.seperation {
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
     position: relative;
-    height: 10px;
-    background-color: rgb(61 61 62);
-    z-index: 30;
+    z-index: 20;
 }
 
 .btn {
@@ -108,7 +108,7 @@ nav button {
     font-weight: 400;
 }
 
-.btn-red-sn {
+.btn-red-sm {
     background-color: red;
     color: white;
 }
@@ -137,46 +137,44 @@ nav button {
     color: white;
     justify-content: center;
     align-items: center;
-
 }
+
+
 
 .secImg {
     position: relative;
 }
 
 .secImg img {
-    width: 30vw;
+    width: 680px;
+    position: relative;
+    /* z-index: 10; */
 }
 
 .secImg video {
     position: absolute;
-    top: 20px;
-    left: 40px;
+    top: 56px;
+    right: 58px;
+    width: 555px;
 }
 
 section.first>div {
     display: flex;
     flex-direction: column;
-
+    padding: 34px 0;
 }
 
-section.first>div:nth-child(1) {
-    font-size: 16px;
+section.first>div :nth-child(1) {
+    font-size: 48px;
     font-weight: bolder;
-    text-align: center;
-    padding-right: 130px;
 }
 
 
-section.first>div:nth-child(2) {
+section.first>div :nth-child(2) {
     font-size: 24px;
+
 }
 
-.secText span {
-    font-size: 16px;
-    font-weight: bolder;
-    text-align: center;
-}
 
 .faq h2 {
     text-align: center;
@@ -187,15 +185,20 @@ section.first>div:nth-child(2) {
     background: black;
     color: white;
     padding: 34px;
-    font-size: 24px;
 }
 
 .faqbox:hover {
     background-color: #414141;
+    color: white;
+}
+
+.faqbox svg {
+    filter: invert(1);
 }
 
 .faqbox {
-    transition: all ease-in-out;
+    transition: all 1s ease-out;
+    font-size: 24px;
     display: flex;
     justify-content: space-between;
     background-color: #2d2d2d;
@@ -204,6 +207,7 @@ section.first>div:nth-child(2) {
     margin: 34px auto;
     cursor: pointer;
 }
+
 footer {
     color: white;
     max-width: 60vw;
@@ -212,28 +216,92 @@ footer {
 }
 
 footer .questions {
-    padding: 0 0 40px 65px;
+    padding: 34px 0;
 }
+
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Add spacing between grid items */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
-    text-align: center; /* Center-align text inside grid items */
 }
 
-.footer div {
-    padding: 10px; /* Add padding for better spacing */
-    
+
+
+@media screen and (max-width: 1300px) {
+
+    nav{
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 305px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer-item{
+        align-items: center;
+    }
+ 
+
 }
+
+
+
+@media screen and (max-width: 1300px) {
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+
 .footer a {
-    color: white;
-    text-decoration: none;
     font-size: 14px;
-    padding: 5px 0;
+    color: white;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
 }
